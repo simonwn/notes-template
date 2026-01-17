@@ -20,6 +20,9 @@
   show figure.caption: set align(start)
   show figure.caption.where(kind: table): set align(center)
 
+  show figure.where(kind: raw): set align(start)
+  show figure.caption.where(kind: raw): set align(center)
+  
   set figure.caption(separator: [. ])
   show figure: fig => {
     let prefix = (
@@ -39,6 +42,15 @@
     size: 1em / 0.8,
     spacing: 100%,
   )
+
+  show raw.where(block: true): code => {
+    show raw.line: line => {
+      text(fill: gray)[#line.number]
+      h(1em)
+      line.body
+    }
+    code
+  }
 
   set page(
     columns: 1,

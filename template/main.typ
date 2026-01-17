@@ -20,6 +20,8 @@ $ a + b = gamma $ <eq:gamma>
 
 #lorem(25)
 
+This is a reference @ppo.
+
 = Methods
 
 #figure(
@@ -55,13 +57,11 @@ $ a + b = gamma $ <eq:gamma>
 
 #lorem(100)
 
-#figure(caption: [Example `python` code printing text.])[#sourcecode(
-```python
-if a != b:
-  print("Hello world!")
-else if a == b:
-  print("Goodbye world!")
-else:
-  print("This is a long sentence where I ramble until I get 80 characters here.")
+#figure(
+  caption: [Some Code],
+```rust
+fn main() {
+    println!("Hello World!");
+}
 ```
-)] <py-test>
+)

@@ -55,7 +55,7 @@
   set page(
     columns: 1,
     paper: paper-size,
-    margin: (x: 80pt, top: 80.51pt, bottom: 89.51pt)
+    margin: (x: 80pt, top: 80pt, bottom: 80pt)
   )
 
   // Equation numbering and spacing.
@@ -98,6 +98,7 @@
       show std.title: set par(leading: 0.5em)
       show std.title: set text(size: 24pt, weight: "regular")
       show std.title: set block(below: 8.35mm)
+      v(150pt)
       std.title()
 
       // Display the authors list.
@@ -140,7 +141,10 @@
   set par(justify: true, spacing: 1.5em, leading: 0.5em)
 
   // Table of contents and page break before content
-  [#outline()]
+  columns(2, gutter: 8pt)[
+    #outline()
+  ]
+
   [#pagebreak()]
 
   body
